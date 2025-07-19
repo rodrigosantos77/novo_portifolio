@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Iniciar o Firefox em localhost",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}",
+      "reAttach": true
+    }
+  ]
+}
