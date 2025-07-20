@@ -1,0 +1,286 @@
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0f172a; /* azul escuro */
+  color: #f1f5f9; /* cinza claro */
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  padding-top: 80px;
+}
+
+
+/* Navbar  */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #111;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #00bcd4;
+}
+
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f172a, #1e293b); /* degrade */
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #38bdf8; /* azul claro */
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #e2e8f0;
+}
+
+.btn-contato {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-contato:hover {
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+.hero-img img {
+  max-width: 300px;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+}
+
+/* SOBRE MIM SECTION */
+.sobre {
+  padding: 80px;
+  background-color: #1e293b; /* tom mais claro que o hero */
+  color: #f1f5f9;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 36px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+
+/* SKILLS SECTION */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 20px;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-weight: bold;
+  font-size: 16px;
+  width: 120px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill i {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  background-color: #334155;
+}
+
+
+/* PROJETOS SECTION */
+.projetos {
+  padding: 80px;
+  background-color: #0f172a;
+  text-align: center;
+}
+
+.projetos h2 {
+  font-size: 36px;
+  color: #38bdf8;
+  margin-bottom: 40px;
+}
+
+.cards-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+  width: 300px;
+  color: #f1f5f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #cbd5e1;
+}
+
+.btn-ver {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-ver:hover {
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+/* CONTATO SECTION */
+.contato {
+  padding: 80px;
+  background-color: #1e293b;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 36px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.contato p {
+  font-size: 18px;
+  color: #e2e8f0;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contato .btn-contato {
+  padding: 12px 28px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.contato .btn-contato:hover {
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  border-top: 1px solid #334155;
+}
+
+.footer .redes-sociais {
+  margin-bottom: 15px;
+}
+
+.footer .redes-sociais a {
+  margin: 0 10px;
+  color: #38bdf8;
+  font-size: 28px;
+  transition: color 0.3s ease;
+   text-decoration: none;
+}
+
+.footer .redes-sociais a:hover {
+  color: #0ea5e9;
+}
