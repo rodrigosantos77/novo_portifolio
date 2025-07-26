@@ -20,6 +20,12 @@ section {
   padding-top: 80px;
 }
 
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 
 /* Navbar  */
 .navbar {
@@ -96,22 +102,17 @@ section {
   color: #ffffff;
 }
 
-.hero-img img {
-  max-width: 300px;
-  border-radius: 50%;
-  border: 4px solid #38bdf8;
-}
 
 /* SOBRE MIM SECTION */
 .sobre {
-  padding: 80px;
-  background-color: #1e293b; /* tom mais claro que o hero */
+  padding: 80px 20px; /* lateral menor pra mobile */
+  background-color: #1e293b;
   color: #f1f5f9;
   text-align: center;
 }
 
 .sobre h2 {
-  font-size: 36px;
+  font-size: clamp(24px, 5vw, 36px); /* adaptável: 24px (mín), 5vw (dinâmico), 36px (máx) */
   color: #38bdf8;
   margin-bottom: 20px;
 }
@@ -119,10 +120,11 @@ section {
 .sobre p {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: clamp(14px, 2.5vw, 18px); /* adaptável pro parágrafo */
   line-height: 1.8;
   color: #e2e8f0;
 }
+
 
 /* SKILLS SECTION */
 .skills-grid {
@@ -302,6 +304,7 @@ section {
   cursor: pointer;
 }
 
+
 /* Mobile */
 @media (max-width: 768px) {
   .menu {
@@ -325,4 +328,71 @@ section {
   .menu-toggle {
     display: block;
   }
+
+  /* HERO IMAGE em mobile */
+  .hero-img img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+  }
+
+  /* SOBRE MIM SECTION em mobile */
+  .sobre {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: #1e293b;
+    color: #f1f5f9;
+  }
+
+  .sobre h2 {
+    font-size: 28px; /* menor para caber melhor */
+    margin-bottom: 16px;
+    color: #38bdf8;
+  }
+
+  .sobre p {
+    max-width: 90%;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 auto;
+    color: #e2e8f0;
+  }
 }
+
+
+
+
+@media (max-width: 576px) {
+  .skills {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .skills h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    color: #38bdf8;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .skill {
+    width: 100px;
+    padding: 16px 10px;
+    font-size: 14px;
+  }
+
+  .skill i {
+    font-size: 28px;
+    margin-bottom: 6px;
+  }
+}
+
