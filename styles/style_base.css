@@ -1,5 +1,7 @@
 
-/* Reset básico */
+/* ===================================================
+   RESET E BASE
+=================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +10,15 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #0f172a; /* azul escuro */
-  color: #f1f5f9; /* cinza claro */
+  background-color: #0f172a;
+  color: #f1f5f9;
   line-height: 1.6;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 section {
   padding-top: 80px;
 }
@@ -26,8 +29,9 @@ section {
   padding: 0 15px;
 }
 
-
-/* Navbar  */
+/* ===================================================
+   NAVBAR
+=================================================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -58,15 +62,25 @@ section {
   color: #00bcd4;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
 
-/* HERO SECTION */
+/* ===================================================
+   HERO SECTION
+=================================================== */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 60px 80px;
   min-height: 100vh;
-  background: linear-gradient(to right, #0f172a, #1e293b); /* degrade */
+  background: linear-gradient(to right, #0f172a, #1e293b);
 }
 
 .hero-content {
@@ -77,7 +91,7 @@ section {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #38bdf8; /* azul claro */
+  color: #38bdf8;
 }
 
 .hero p {
@@ -86,7 +100,8 @@ section {
   color: #e2e8f0;
 }
 
-.btn-contato {
+.btn-contato,
+.contato .btn-contato {
   display: inline-block;
   padding: 12px 28px;
   background-color: #38bdf8;
@@ -97,22 +112,23 @@ section {
   transition: background 0.3s ease;
 }
 
-.btn-contato:hover {
+.btn-contato:hover,
+.contato .btn-contato:hover {
   background-color: #0ea5e9;
   color: #ffffff;
 }
 
-
-/* SOBRE MIM SECTION */
+/* ===================================================
+   SOBRE MIM SECTION
+=================================================== */
 .sobre {
-  padding: 80px 20px; /* lateral menor pra mobile */
+  padding: 80px 20px;
   background-color: #1e293b;
-  color: #f1f5f9;
   text-align: center;
 }
 
 .sobre h2 {
-  font-size: clamp(24px, 5vw, 36px); /* adaptável: 24px (mín), 5vw (dinâmico), 36px (máx) */
+  font-size: clamp(24px, 5vw, 36px);
   color: #38bdf8;
   margin-bottom: 20px;
 }
@@ -120,13 +136,14 @@ section {
 .sobre p {
   max-width: 800px;
   margin: 0 auto;
-  font-size: clamp(14px, 2.5vw, 18px); /* adaptável pro parágrafo */
+  font-size: clamp(14px, 2.5vw, 18px);
   line-height: 1.8;
   color: #e2e8f0;
 }
 
-
-/* SKILLS SECTION */
+/* ===================================================
+   SKILLS SECTION
+=================================================== */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -160,8 +177,9 @@ section {
   background-color: #334155;
 }
 
-
-/* PROJETOS SECTION */
+/* ===================================================
+   PROJETOS SECTION
+=================================================== */
 .projetos {
   padding: 80px;
   background-color: #0f172a;
@@ -190,6 +208,9 @@ section {
   color: #f1f5f9;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card:hover {
@@ -224,7 +245,9 @@ section {
   color: #ffffff;
 }
 
-/* CONTATO SECTION */
+/* ===================================================
+   CONTATO SECTION
+=================================================== */
 .contato {
   padding: 80px;
   background-color: #1e293b;
@@ -246,22 +269,9 @@ section {
   margin-right: auto;
 }
 
-.contato .btn-contato {
-  padding: 12px 28px;
-  background-color: #38bdf8;
-  color: #0f172a;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.contato .btn-contato:hover {
-  background-color: #0ea5e9;
-  color: #ffffff;
-}
-
-/* FOOTER */
+/* ===================================================
+   FOOTER
+=================================================== */
 .footer {
   background-color: #0f172a;
   color: #94a3b8;
@@ -280,341 +290,71 @@ section {
   color: #38bdf8;
   font-size: 28px;
   transition: color 0.3s ease;
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .footer .redes-sociais a:hover {
   color: #0ea5e9;
 }
 
-
-/* Mobile  mudancas*/
-.menu {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* ----------- @media até 768px (tablets e smartphones grandes) ----------- */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #111;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    z-index: 1001;
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .hero-img img {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
-    display: block;
-    border-radius: 50%;
-    border: 4px solid #38bdf8;
-  }
-
-  .sobre {
-    padding: 1.5rem 1rem;
-    text-align: center;
-    background-color: #1e293b;
-    color: #f1f5f9;
-  }
-
-  .sobre h2 {
-    font-size: 28px;
-    margin-bottom: 16px;
-    color: #38bdf8;
-  }
-
-  .sobre p {
-    max-width: 90%;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0 auto;
-    color: #e2e8f0;
-  }
-
-  .skills {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .skills h2 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-    color: #38bdf8;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 16px;
-    justify-items: center;
-  }
-
-  .skill {
-    width: 100px;
-    padding: 16px 10px;
-    font-size: 14px;
-  }
-
-  .skill i {
-    font-size: 28px;
-    margin-bottom: 6px;
-  }
-}
-
-
-/* ----------- @media até 576px (smartphones médios) ----------- */
-@media (max-width: 576px) {
-  .hero-img img {
-    width: 140px;
-    height: 140px;
-  }
-
-  .sobre h2 {
-    font-size: 26px;
-  }
-
-  .sobre p {
-    font-size: 15px;
-  }
-
-  .skill {
-    width: 90px;
-    font-size: 13px;
-  }
-
-  .skill i {
-    font-size: 26px;
-  }
-}
-
-/* ----------- @media até 380px (celulares compactos) ----------- */
+/* ===================================================
+   MEDIA QUERIES: ORDEM DO MENOR PARA O MAIOR
+=================================================== */
 @media (max-width: 380px) {
-  .hero-img img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .sobre h2 {
-    font-size: 22px;
-  }
-
-  .sobre p {
-    font-size: 13px;
-  }
-
-  .skill {
-    width: 80px;
-    font-size: 12px;
-  }
-
-  .skill i {
-    font-size: 22px;
-  }
+  .hero-img img { width: 120px; height: 120px; }
+  .sobre h2 { font-size: 22px; }
+  .sobre p { font-size: 13px; }
+  .skill { width: 80px; font-size: 12px; }
+  .skill i { font-size: 22px; }
 }
 
+@media (max-width: 576px) {
+  .hero-img img { width: 140px; height: 140px; }
+  .sobre h2 { font-size: 26px; }
+  .sobre p { font-size: 15px; }
+  .skill { width: 90px; font-size: 13px; }
+  .skill i { font-size: 26px; }
+}
 
-/* DESKTOP (maior que 1024px) */
+@media (max-width: 768px) {
+  .menu { display: none; flex-direction: column; background-color: #111; position: absolute; top: 60px; right: 20px; width: 200px; padding: 15px; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); z-index: 1001; }
+  .menu.show { display: flex; }
+  .menu-toggle { display: block; }
+  .hero-img img { width: 160px; height: 160px; margin: 0 auto; display: block; border-radius: 50%; border: 4px solid #38bdf8; }
+  .sobre { padding: 1.5rem 1rem; }
+  .sobre h2 { font-size: 28px; }
+  .sobre p { max-width: 90%; font-size: 16px; line-height: 1.6; margin: 0 auto; }
+  .skills { padding: 2rem 1rem; text-align: center; }
+  .skills h2 { font-size: 28px; margin-bottom: 1rem; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 16px; justify-items: center; }
+  .skill { width: 100px; padding: 16px 10px; font-size: 14px; }
+  .skill i { font-size: 28px; margin-bottom: 6px; }
+}
+
 @media (min-width: 1024px) {
-  .sobre {
-    padding: 100px 80px;
-    text-align: center;
-  }
-
-  .sobre h2 {
-    font-size: 42px;
-    margin-bottom: 24px;
-  }
-
-  .sobre p {
-    font-size: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.8;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 32px;
-    justify-content: center;
-    padding: 40px 0;
-  }
-
-  .skill {
-    width: 120px;
-    font-size: 16px;
-    padding: 20px 12px;
-  }
-
-  .skill i {
-    font-size: 36px;
-  }
-
-  /* area projeto em 1024px */
- /* projeto */
-.projetos {
-  padding: 60px 0;
-  background-color: #1e293b;
-}
-
-.projetos h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-.cards-projetos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 1.25rem;
-}
-
-.card p {
-  margin: 15px 0;
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-.card .btn-ver {
-  margin-top: auto;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.card .btn-ver:hover {
-  background: #0056b3;
-}
-
-/* Carrossel */
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.carousel-images {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-}
-
-.carousel-images img {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-  height: 180px;
-  border-radius: 10px;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 5px;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-
-/* Area Contato  */
-.contato {
-  padding: 80px;
-  background-color: #1e293b;
-  color: #f1f5f9;
-  text-align: center;
-}
-
-.contato h2 {
-  font-size: 36px;
-  color: #38bdf8;
-  margin-bottom: 20px;
-}
-
-.contato p {
-  font-size: 18px;
-  color: #e2e8f0;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contato .btn-contato {
-  padding: 12px 28px;
-  background-color: #38bdf8;
-  color: #0f172a;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.contato .btn-contato:hover {
-  background-color: #0ea5e9;
-  color: #ffffff;
-}
-
+  .sobre { padding: 100px 80px; }
+  .sobre h2 { font-size: 42px; margin-bottom: 24px; }
+  .sobre p { font-size: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 32px; justify-content: center; padding: 40px 0; }
+  .skill { width: 120px; font-size: 16px; padding: 20px 12px; }
+  .skill i { font-size: 36px; }
+  .projetos { padding: 60px 0; background-color: #0f172a; }
+  .projetos h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+  .cards-projetos { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+  .card { background: #fff; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.1); padding: 20px; width: 300px; display: flex; flex-direction: column; align-items: center; }
+  .card h3 { margin-bottom: 10px; font-size: 1.25rem; }
+  .card p { margin: 15px 0; font-size: 0.95rem; text-align: center; }
+  .card .btn-ver { margin-top: auto; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 8px; transition: background 0.3s ease; }
+  .card .btn-ver:hover { background: #0056b3; }
+  .carousel { position: relative; width: 100%; height: 180px; overflow: hidden; border-radius: 10px; margin-bottom: 15px; }
+  .carousel-images { display: flex; transition: transform 0.4s ease-in-out; }
+  .carousel-images img { width: 100%; flex-shrink: 0; object-fit: cover; height: 180px; border-radius: 10px; }
+  .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); border: none; color: white; font-size: 1.5rem; padding: 5px 10px; cursor: pointer; z-index: 1; border-radius: 5px; }
+  .carousel-btn.prev { left: 10px; }
+  .carousel-btn.next { right: 10px; }
+  .contato { padding: 80px; background-color: #1e293b; color: #f1f5f9; text-align: center; }
+  .contato h2 { font-size: 36px; color: #38bdf8; margin-bottom: 20px; }
+  .contato p { font-size: 18px; color: #e2e8f0; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .contato .btn-contato { padding: 12px 28px; background-color: #38bdf8; color: #0f172a; font-weight: bold; text-decoration: none; border-radius: 8px; transition: background 0.3s ease; }
+  .contato .btn-contato:hover { background-color: #0ea5e9; color: #ffffff; }
 }
