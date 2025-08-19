@@ -85,22 +85,40 @@
     <h2>Meus Projetos</h2>
     <div class="cards-projetos">
       
-      <!-- Projeto Reservas -->
-      <div class="card">
-        <h3>Projeto Reservas</h3>
-        <div class="carousel">
-          <div class="carousel-images">
-            <img src="./assets/images/img-rails/img_01.png" alt="Tela 1 do projeto" class="zoomable">
-            <img src="./assets/images/img-rails/img_02.png" alt="Tela 2 do projeto" class="zoomable">
-            <img src="./assets/images/img-rails/img_03.png" alt="Tela 3 do projeto" class="zoomable">
-            <img src="./assets/images/img-rails/img_04.png" alt="Tela 4 do projeto" class="zoomable">
+      <!--Projeto Reservas -->
+          <!-- Projeto Reservas -->
+<div class="card">
+  <h3>Projeto Reservas</h3>
+
+  <!-- Bootstrap Carousel -->
+          <div id="carouselReservas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/images/img-rails/img_01.png" class="d-block w-100 zoomable" alt="Tela 1 do projeto">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/img-rails/img_02.png" class="d-block w-100 zoomable" alt="Tela 2 do projeto">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/img-rails/img_03.png" class="d-block w-100 zoomable" alt="Tela 3 do projeto">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/img-rails/img_04.png" class="d-block w-100 zoomable" alt="Tela 4 do projeto">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselReservas" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselReservas" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
           </div>
-          <button class="carousel-btn prev">&#10094;</button>
-          <button class="carousel-btn next">&#10095;</button>
+
+          <p>Sistema de reservas feito com Ruby on Rails e PostgreSQL. Possui login, CRUD e autenticação.</p>
+          <a href="#" class="btn-ver">Ver projeto</a>
         </div>
-        <p>Sistema de reservas feito com Ruby on Rails e PostgreSQL. Possui login, CRUD e autenticação.</p>
-        <a href="#" class="btn-ver">Ver projeto</a>
-      </div>
 
       <!-- API Node.js -->
       <div class="card">
