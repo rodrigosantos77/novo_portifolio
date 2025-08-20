@@ -1,28 +1,19 @@
-// Seleciona modal e elementos
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImg");
-const captionText = document.getElementById("caption");
-const span = document.getElementsByClassName("close")[0];
 
-// Pega todas as imagens dos carousels
-const images = document.querySelectorAll(".carousel-images img");
+  document.addEventListener('DOMContentLoaded', function () {
+    // Seleciona a imagem dentro do modal
+    const modalImage = document.getElementById('modalImage');
 
-images.forEach(img => {
-  img.addEventListener("click", function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    // Seleciona TODAS as imagens que têm a classe 'zoomable'
+    const allZoomableImages = document.querySelectorAll('.zoomable');
+
+    // Adiciona um "ouvinte de evento" de clique a cada imagem
+    allZoomableImages.forEach(image => {
+      image.addEventListener('click', function () {
+        // Pega o caminho da imagem que foi clicada
+        const imageSrc = this.getAttribute('src');
+        
+        // Define o caminho da imagem no modal para o mesmo
+        modalImage.setAttribute('src', imageSrc);
+      });
+    });
   });
-});
-
-// Fechar modal ao clicar no "X"
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// Fechar modal ao clicar fora da imagem
-modal.onclick = function (e) {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-};
