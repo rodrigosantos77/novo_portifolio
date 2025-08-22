@@ -367,7 +367,13 @@ section {
   .sobre p { font-size: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 32px; justify-content: center; padding: 40px 0; }
   .skill { width: 120px; font-size: 16px; padding: 20px 12px; }
-  .skill i { font-size: 36px; }
+  .skill h2 { color: #38bdf8; }
+  #skills {
+    background-color: #1e293b; /* Cor escura de fundo para telas grandes */
+    color:#f1f5f9;           /* Cor do texto (clara) para contraste */
+  }
+  #skills h2 { font-size: 42px; margin-bottom: 24px; text-align: center; color: #38bdf8; }
+  .skill i { font-size: 36px; color: #38bdf8; }
   .projetos { padding: 60px 0; background-color: #0f172a; }
   .projetos h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
   .cards-projetos { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
