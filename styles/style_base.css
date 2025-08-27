@@ -396,19 +396,138 @@ section {
 }
 
 @media (max-width: 768px) {
-  .menu { display: none; flex-direction: column; background-color: #111; position: absolute; top: 60px; right: 20px; width: 200px; padding: 15px; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); z-index: 1001; }
-  .menu.show { display: flex; }
-  .menu-toggle { display: block; }
-  .hero-img img { width: 160px; height: 160px; margin: 0 auto; display: block; border-radius: 50%; border: 4px solid #38bdf8; }
-  .sobre { padding: 1.5rem 1rem; }
-  .sobre h2 { font-size: 28px; }
-  .sobre p { max-width: 90%; font-size: 16px; line-height: 1.6; margin: 0 auto; }
-  .skills { padding: 2rem 1rem; text-align: center; }
-  .skills h2 { font-size: 28px; margin-bottom: 1rem; }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 16px; justify-items: center; }
-  .skill { width: 100px; padding: 16px 10px; font-size: 14px; }
-  .skill i { font-size: 28px; margin-bottom: 6px; }
+  .menu { 
+    display: none; 
+    flex-direction: column; 
+    background-color: #111; 
+    position: absolute; 
+    top: 60px; 
+    right: 20px; 
+    width: 200px; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+    z-index: 1001; 
+  }
+  .menu.show { 
+    display: flex; 
+  }
+  .menu-toggle { 
+    display: block; 
+  }
+  .hero-img img { 
+    width: 160px; 
+    height: 160px; 
+    margin: 0 auto; 
+    display: block; 
+    border-radius: 50%; 
+    border: 4px solid #38bdf8; 
+  }
+  .sobre { 
+    padding: 1.5rem 1rem; 
+  }
+  .sobre h2 { 
+    font-size: 28px; 
+  }
+  .sobre p { 
+    max-width: 90%; 
+    font-size: 16px; 
+    line-height: 1.6; 
+    margin: 0 auto; 
+  }
+  
+  /* ===================================================
+     AJUSTES PARA A SEÇÃO DE HABILIDADES
+     (Correção de alinhamento e espaçamento)
+  =================================================== */
+  .skills {
+    padding-bottom: 2rem; /* Adiciona espaçamento na parte inferior da seção */
+    text-align: center; /* Garante que o texto seja centralizado */
+    background-color: #1e293b; /* Cor escura de fundo para telas grandes */
+    color:#f1f5f9;
+  }
+
+
+  .skills h2 {
+    font-size: 28px; /* Ajusta o tamanho da fonte para 768px */
+    margin-bottom: 1rem;
+    color: #38bdf8; /* Mantém a cor azul */
+  }
+
+  .skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 16px; 
+    justify-content: center; /* Centraliza a grade inteira */
+    justify-items: center; /* Centraliza cada item do grid */
+  }
+
+  .skill { 
+    width: 100px; /* Largura ajustada para 768px */
+    padding: 16px 10px; 
+    font-size: 14px; 
+  }
+  
+  .skill i { 
+    font-size: 28px; /* Tamanho do ícone para 768px */
+    margin-bottom: 6px; 
+    color: #38bdf8;
+  }
+
+  /* ===================================================
+     AJUSTES PARA A SEÇÃO DE PROJETOS E CARDS
+     (Melhora a responsividade e o espaçamento)
+  =================================================== */
+  .projetos { 
+    padding: 2rem 1rem; /* Adiciona padding para as laterais */
+    background-color: #1e293b; 
+  }
+
+  .projetos h2 { 
+    text-align: center; 
+    font-size: 2rem; 
+    margin-bottom: 40px; 
+  }
+  .cards-projetos { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    justify-content: center; 
+  }
+  .card { 
+    background: #fff; 
+    border-radius: 15px; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+    padding: 20px; 
+    width: 300px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .card h3 { 
+    margin-bottom: 10px; 
+    font-size: 1.25rem; 
+  }
+  .card p { 
+    margin: 15px 0; 
+    font-size: 0.95rem; 
+    text-align: center; 
+  }
+  .card .btn-ver { 
+    margin-top: auto; 
+    padding: 10px 20px; 
+    background: #007bff; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    transition: background 0.3s ease; 
+  }
+  .card .btn-ver:hover { 
+    background: #0056b3; 
+  }
+  /* ... Demais regras (carousel, contato) */
 }
+
 
 @media (min-width: 1024px) {
   .sobre { padding: 100px 80px; }
@@ -423,7 +542,7 @@ section {
   }
   #skills h2 { font-size: 42px; margin-bottom: 24px; text-align: center; color: #38bdf8; }
   .skill i { font-size: 36px; color: #38bdf8; }
-  .projetos { padding: 60px 0; background-color: #0f172a; }
+  .projetos { padding: 60px 0; background-color: #1e293b; }
   .projetos h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
   .cards-projetos { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
   .card { background: #fff; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.1); padding: 20px; width: 300px; display: flex; flex-direction: column; align-items: center; }
