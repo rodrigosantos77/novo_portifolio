@@ -231,14 +231,9 @@ section {
 }
 
 
-.carousel {
-  aspect-ratio: 16 / 9; /* Define uma proporção de 16:9 (formato widescreen) */
-}
-
 .carousel-inner .carousel-item img {
   /* O seletor foi corrigido para 'carousel-inner' e 'carousel-item img' */
   width: 100%;
-  height: 100%;
   object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
   border-radius: 8px; /* Mantém o raio da borda na imagem */
 }
@@ -396,6 +391,9 @@ section {
   .contato h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+  }
+  .carousel-inner {
+    height: 200px; /* Você pode ajustar este valor */
   }
 }
 
@@ -594,4 +592,10 @@ section {
   .contato p { font-size: 18px; color: #e2e8f0; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
   .contato .btn-contato { padding: 12px 28px; background-color: #38bdf8; color: #0f172a; font-weight: bold; text-decoration: none; border-radius: 8px; transition: background 0.3s ease; }
   .contato .btn-contato:hover { background-color: #0ea5e9; color: #ffffff; }
+}
+
+/* Correção final para o salto do carrossel */
+.col {
+  padding-left: 0;
+  padding-right: 0;
 }
