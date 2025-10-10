@@ -237,6 +237,17 @@ section {
   object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
   border-radius: 8px; /* Mantém o raio da borda na imagem */
 }
+/* Altura padrão para telas maiores que 1024px (Desktop) */
+.carousel-inner {
+    height: 300px; 
+}
+
+.carousel-inner .carousel-item img {
+    height: 100%; 
+    object-fit: cover; 
+}
+
+
 
 /* ===================================================
    PROJETOS para ativar o zoom e o click do cell SECTION
@@ -265,6 +276,24 @@ section {
 /* Opcional: Adicione um estilo para o botão de fechar do modal */
 .btn-close-white {
   filter: invert(1) grayscale(100%) brightness(200%); /* Torna o X branco */
+}
+
+/* Regras para alinhar o conteúdo verticalmente dentro de cada Card/Coluna */
+.col {
+  /* Habilita o Flexbox e organiza os itens em uma coluna (cima para baixo) */
+  display: flex;
+  flex-direction: column;
+}
+
+.col p {
+  /* Diz ao parágrafo para "crescer" e ocupar todo o espaço vertical disponível */
+  flex-grow: 1; 
+}
+
+/* Regra de correção: Alinha o botão à base E o centraliza */
+.col .btn-ver {
+  /* NOVO: Centraliza horizontalmente e empurra para a base */
+  margin: auto auto 0 auto; 
 }
 
 
@@ -392,11 +421,12 @@ section {
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
+ 
+   /* AJUSTE na ALTURA DO CARROSSEl */
   .carousel-inner {
-    height: 200px; /* Você pode ajustar este valor */
+    height: 180px; /* Altura menor para telas muito pequenas */
   }
 }
-
 
 
 @media (max-width: 576px) {
@@ -405,6 +435,10 @@ section {
   .sobre p { font-size: 15px; }
   .skill { width: 90px; font-size: 13px; }
   .skill i { font-size: 26px; }
+  /* AJUSTE nA ALTURA DO CARROSSEL */
+  .carousel-inner { 
+    height: 220px; /* Altura para tablets */
+  }
 }
 
 @media (max-width: 768px) {
@@ -538,7 +572,10 @@ section {
   .card .btn-ver:hover { 
     background: #0056b3; 
   }
-  
+  /* AJUSTE nA ALTURA DO CARROSSEL */
+  .carousel-inner { 
+    height: 220px; /* Altura para tablets */
+  }
 }
 
 
@@ -592,6 +629,11 @@ section {
   .contato p { font-size: 18px; color: #e2e8f0; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
   .contato .btn-contato { padding: 12px 28px; background-color: #38bdf8; color: #0f172a; font-weight: bold; text-decoration: none; border-radius: 8px; transition: background 0.3s ease; }
   .contato .btn-contato:hover { background-color: #0ea5e9; color: #ffffff; }
+
+   /* AJUSTE NA ALTURA DO CAROUSSEL*/
+  .carousel-inner {
+     height: 300px;
+  }
 }
 
 /* Correção final para o salto do carrossel */
