@@ -106,59 +106,117 @@ section {
    SOBRE MIM SECTION
 =================================================== */
 .sobre {
-  padding: 80px 20px;
+  padding: 56px 20px 36px;
   background-color: #1e293b;
   text-align: center;
 }
 
 .sobre h2 {
-  font-size: clamp(24px, 5vw, 36px);
+  font-size: clamp(28px, 4vw, 42px);
   color: #38bdf8;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .sobre p {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
-  font-size: clamp(14px, 2.5vw, 18px);
-  line-height: 1.8;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.7;
   color: #e2e8f0;
 }
 
 /* ===================================================
    SKILLS SECTION
 =================================================== */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.skills {
+  padding: 36px 20px 70px;
+  background-color: #0f172a;
+  text-align: center;
 }
 
-.skill {
-  background-color: #1e293b;
+.skills h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  color: #38bdf8;
+  margin-bottom: 28px;
+}
+
+/* Wrapper geral das categorias */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Card de cada categoria */
+.skills-box {
+  background: linear-gradient(145deg, #14213d, #0f172a);
   border: 1px solid #334155;
-  padding: 20px;
-  border-radius: 8px;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.08);
+  transition: 0.3s ease;
+}
+
+.skills-box:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.16);
+}
+
+.skills-box h3 {
+  color: #38bdf8;
+  font-size: 22px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* Grid interno dos itens */
+.skills-box .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(90px, 1fr));
+  gap: 14px;
+  margin: 0;
+}
+
+/* Card individual da skill */
+.skill {
+  background-color: #0b132b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  min-height: 100px;
+  padding: 14px 10px;
   color: #e2e8f0;
-  font-weight: bold;
-  font-size: 16px;
-  width: 120px;
+  font-weight: 600;
+  font-size: 14px;
   text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.skill i {
-  font-size: 36px;
-  margin-bottom: 10px;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .skill:hover {
-  transform: scale(1.05);
-  background-color: #334155;
+  transform: translateY(-3px);
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.18);
+  background-color: #0b132b;
+}
+
+.skill i {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #38bdf8;
+}
+
+.skill span {
+  font-size: 13px;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 /* ===================================================
@@ -176,20 +234,13 @@ section {
   margin-bottom: 40px;
 }
 
-.cards-projetos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
 .card {
   background-color: #1e293b;
   border: 1px solid #334155;
   border-radius: 12px;
   padding: 24px;
   width: 100%; /* ajuste das imagens de transicao*/  
-  max-width: 300px;
+  max-width: 340px;
   color: #f1f5f9;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
@@ -214,20 +265,135 @@ section {
   color: #cbd5e1;
 }
 
-.btn-ver {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+/* ===================================================
+   BOTAO VER PROJETO
+=================================================== */
+.btn-ver{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 20px;
+  background:#38bdf8;
+  color:#0f172a;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+  transition:0.3s;
+}
+.btn-ver:hover{
+  background:#0ea5e9;
+  color:white;
 }
 
-.btn-ver:hover {
-  background-color: #0ea5e9;
-  color: #ffffff;
+/* VISUAL Melhorado NO CARD PRINCIPAL*/
+.col-lg-8{
+  border:2px solid #38bdf8;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 0 20px rgba(56,189,248,0.2);
+  margin-bottom:60px;
+}
+.col-lg-4{
+   margin-top:40px;
+}
+
+/* Destaque do projeto principal botoes github */
+.botoes-projeto{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.btn-api{
+  padding:10px 22px;
+  background:#38bdf8;
+  color:#0f172a;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.btn-api:hover{
+  background:#0ea5e9;
+}
+
+.btn-github{
+  padding:10px 22px;
+  border:1px solid #38bdf8;
+  color:#38bdf8;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.3s;
+}
+.btn-github:hover{
+  background:#38bdf8;
+  color:#0f172a;
+}
+ /* FUNCIONALIDADES no card*/ 
+.funcionalidades ul{
+  list-style:none;
+  padding-left:0;
+  margin-top:10px;
+}
+
+.funcionalidades ul li{
+  color:#334155!important;
+  font-size:15px;
+  margin-bottom:6px;
+  position:relative;
+  padding-left:20px;
+}
+
+.funcionalidades li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#38bdf8;
+  font-weight:bold;
+}
+.titulo-func{
+  margin-top:20px;
+  color:#38bdf8;
+  font-weight:600;
+}
+
+/* ===================================================
+   CARDS DOS PROJETOS LATERAIS
+=================================================== */
+
+.projetos-laterais{
+  display:flex;
+  flex-direction:column;
+  gap:35px;
+}
+
+.card-projeto-secundario{
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #334155;
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.card-projeto-secundario h3{
+  color:#38bdf8;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.card-projeto-secundario p{
+  color:#cbd5e1;
+  font-size:14px;
+}
+
+.card-projeto-secundario img{
+  border-radius:8px;
+}
+
+/* Destaque do projeto principal */
+.col-lg-8 {
+  transform: scale(1.02);
 }
 
 
@@ -583,7 +749,6 @@ section {
   .sobre { padding: 100px 80px; }
   .sobre h2 { font-size: 42px; margin-bottom: 24px; }
   .sobre p { font-size: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 32px; justify-content: center; padding: 40px 0; }
   .skill { width: 120px; font-size: 16px; padding: 20px 12px; }
   .skill h2 { color: #38bdf8; }
   #skills {
@@ -635,6 +800,7 @@ section {
      height: 300px;
   }
 }
+
 
 /* Correção final para o salto do carrossel */
 .col {
