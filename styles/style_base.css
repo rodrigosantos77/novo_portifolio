@@ -8,15 +8,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #0f172a;
   color: #f1f5f9;
   line-height: 1.6;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 section {
@@ -39,11 +39,10 @@ section {
   background-color: #111;
   padding: 10px 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-nav .nav-link {
-  /* Estiliza os links do menu */
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -51,8 +50,7 @@ section {
 }
 
 .navbar-nav .nav-link:hover {
-  /* Muda a cor dos links ao passar o mouse */
-  color: #38bdf8; /* A cor azul que você usou nos títulos */
+  color: #38bdf8;
 }
 
 /* ===================================================
@@ -93,7 +91,7 @@ section {
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn-contato:hover,
@@ -140,7 +138,6 @@ section {
   margin-bottom: 28px;
 }
 
-/* Wrapper geral das categorias */
 .skills-wrapper {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -149,7 +146,6 @@ section {
   margin: 0 auto;
 }
 
-/* Card de cada categoria */
 .skills-box {
   background: linear-gradient(145deg, #14213d, #0f172a);
   border: 1px solid #334155;
@@ -171,7 +167,6 @@ section {
   text-align: left;
 }
 
-/* Grid interno dos itens */
 .skills-box .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(90px, 1fr));
@@ -179,7 +174,6 @@ section {
   margin: 0;
 }
 
-/* Card individual da skill */
 .skill {
   background-color: #0b132b;
   border: 1px solid #334155;
@@ -196,7 +190,6 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: none;
   margin: 0;
 }
 
@@ -223,7 +216,7 @@ section {
    PROJETOS SECTION
 =================================================== */
 .projetos {
-  padding: 80px;
+  padding: 80px 20px;
   background-color: #0f172a;
   text-align: center;
 }
@@ -234,15 +227,22 @@ section {
   margin-bottom: 40px;
 }
 
+.cards-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
 .card {
   background-color: #1e293b;
   border: 1px solid #334155;
   border-radius: 12px;
   padding: 24px;
-  width: 100%; /* ajuste das imagens de transicao*/  
+  width: 100%;
   max-width: 340px;
   color: #f1f5f9;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -268,159 +268,201 @@ section {
 /* ===================================================
    BOTAO VER PROJETO
 =================================================== */
-.btn-ver{
-  display:inline-block;
-  margin-top:12px;
-  padding:10px 20px;
-  background:#38bdf8;
-  color:#0f172a;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:600;
-  transition:0.3s;
-}
-.btn-ver:hover{
-  background:#0ea5e9;
-  color:white;
+.btn-ver {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-/* VISUAL Melhorado NO CARD PRINCIPAL*/
-.col-lg-8{
-  border:2px solid #38bdf8;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 0 20px rgba(56,189,248,0.2);
-  margin-bottom:60px;
-}
-.col-lg-4{
-   margin-top:40px;
-}
-
-/* Destaque do projeto principal botoes github */
-.botoes-projeto{
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  margin-top:20px;
-}
-
-.btn-api{
-  padding:10px 22px;
-  background:#38bdf8;
-  color:#0f172a;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:6px;
-  transition:0.3s;
-}
-
-.btn-api:hover{
-  background:#0ea5e9;
-}
-
-.btn-github{
-  padding:10px 22px;
-  border:1px solid #38bdf8;
-  color:#38bdf8;
-  text-decoration:none;
-  border-radius:6px;
-  transition:0.3s;
-}
-.btn-github:hover{
-  background:#38bdf8;
-  color:#0f172a;
-}
- /* FUNCIONALIDADES no card*/ 
-.funcionalidades ul{
-  list-style:none;
-  padding-left:0;
-  margin-top:10px;
-}
-
-.funcionalidades ul li{
-  color:#334155!important;
-  font-size:15px;
-  margin-bottom:6px;
-  position:relative;
-  padding-left:20px;
-}
-
-.funcionalidades li::before{
-  content:"✔";
-  position:absolute;
-  left:0;
-  color:#38bdf8;
-  font-weight:bold;
-}
-.titulo-func{
-  margin-top:20px;
-  color:#38bdf8;
-  font-weight:600;
+.btn-ver:hover {
+  background: #0ea5e9;
+  color: #ffffff;
 }
 
 /* ===================================================
-   CARDS DOS PROJETOS LATERAIS
+   CARD PRINCIPAL
 =================================================== */
-
-.projetos-laterais{
-  display:flex;
-  flex-direction:column;
-  gap:35px;
-}
-
-.card-projeto-secundario{
-  background:#1e293b;
-  padding:20px;
-  border-radius:12px;
-  border:1px solid #334155;
-  box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
-
-.card-projeto-secundario h3{
-  color:#38bdf8;
-  font-size:20px;
-  margin-bottom:10px;
-}
-
-.card-projeto-secundario p{
-  color:#cbd5e1;
-  font-size:14px;
-}
-
-.card-projeto-secundario img{
-  border-radius:8px;
-}
-
-/* Destaque do projeto principal */
 .col-lg-8 {
+  border: 2px solid #38bdf8;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  margin-bottom: 60px;
   transform: scale(1.02);
 }
 
-
-.carousel-inner .carousel-item img {
-  /* O seletor foi corrigido para 'carousel-inner' e 'carousel-item img' */
-  width: 100%;
-  object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
-  border-radius: 8px; /* Mantém o raio da borda na imagem */
+.col-lg-4 {
+  margin-top: 40px;
 }
-/* Altura padrão para telas maiores que 1024px (Desktop) */
-.carousel-inner {
-    height: 300px; 
-}
-
-.carousel-inner .carousel-item img {
-    height: 100%; 
-    object-fit: cover; 
-}
-
-
 
 /* ===================================================
-   PROJETOS para ativar o zoom e o click do cell SECTION
+   BOTÕES DO PROJETO PRINCIPAL
 =================================================== */
+.botoes-projeto {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
 
+.btn-api {
+  padding: 10px 22px;
+  background: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-api:hover {
+  background: #0ea5e9;
+}
+
+.btn-github {
+  padding: 10px 22px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-github:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* ===================================================
+   FUNCIONALIDADES
+=================================================== */
+.funcionalidades ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.funcionalidades ul li {
+  color: #cbd5e1 !important;
+  font-size: 15px;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.funcionalidades li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+.titulo-func {
+  margin-top: 20px;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* ===================================================
+   PROJETOS LATERAIS
+=================================================== */
+.projetos-laterais {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.card-projeto-secundario {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card-projeto-secundario h3 {
+  color: #38bdf8;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-projeto-secundario p {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.card-projeto-secundario img {
+  border-radius: 8px;
+}
+
+/* ===================================================
+   CARROSSEL
+=================================================== */
+.carousel-inner {
+  height: 300px;
+}
+
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* ===================================================
+   ZOOM DAS IMAGENS
+=================================================== */
 .zoomable {
-  /* Mantém as classes que você já tem */
   width: 100%;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -431,43 +473,39 @@ section {
   transform: scale(1.1);
 }
 
-/* Garante que a imagem ampliada se ajuste ao modal,
-   mesmo que o tamanho dela seja maior que a tela. */
 #modalImage {
   max-width: 100%;
   max-height: 100vh;
-  object-fit: contain; /* Ajusta a imagem inteira sem cortá-la */
+  object-fit: contain;
 }
 
-/* Opcional: Adicione um estilo para o botão de fechar do modal */
 .btn-close-white {
-  filter: invert(1) grayscale(100%) brightness(200%); /* Torna o X branco */
+  filter: invert(1) grayscale(100%) brightness(200%);
 }
 
-/* Regras para alinhar o conteúdo verticalmente dentro de cada Card/Coluna */
+/* ===================================================
+   AJUSTES DE COLUNAS
+=================================================== */
 .col {
-  /* Habilita o Flexbox e organiza os itens em uma coluna (cima para baixo) */
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .col p {
-  /* Diz ao parágrafo para "crescer" e ocupar todo o espaço vertical disponível */
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
-/* Regra de correção: Alinha o botão à base E o centraliza */
 .col .btn-ver {
-  /* NOVO: Centraliza horizontalmente e empurra para a base */
-  margin: auto auto 0 auto; 
+  margin: auto auto 0 auto;
 }
-
 
 /* ===================================================
    CONTATO SECTION
 =================================================== */
 .contato {
-  padding: 80px;
+  padding: 80px 20px;
   background-color: #1e293b;
   text-align: center;
 }
@@ -516,294 +554,355 @@ section {
 }
 
 /* ===================================================
-   MEDIA QUERIES: ORDEM DO MENOR PARA O MAIOR
+   MEDIA QUERIES GERAIS
 =================================================== */
 @media (max-width: 380px) {
-  .hero {padding-left: 15px; padding-right: 15px;}
-  .hero-img { display: flex; justify-content: center;align-items: center; margin-top: 20px;}
-  .hero-img img { max-width: 100%; width: 120px; height: 120px;border-radius: 50%;}
-  
-   /* Ajustes de padding para todas as seções */
-  .sobre, 
-  .skills, 
-  .projetos, 
+  .hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  .sobre,
+  .projetos,
   .contato {
     padding-left: 15px;
     padding-right: 15px;
   }
-  /* Fontes para a seção 'Sobre' */
-  .sobre h2 { 
-    font-size: 22px; 
+
+  .sobre h2 {
+    font-size: 22px;
   }
-  .sobre p { 
-    font-size: 13px; 
+
+  .sobre p {
+    font-size: 13px;
   }
-  /* ===================================================
-    SEÇÃO DE HABILIDADES
-  =================================================== */
-  #skills {
-    background-color: #1e293b; /* Cor escura de fundo para telas grandes */
-    color:#f1f5f9;           /* Cor do texto (clara) para contraste */
-  }
-  #skills h2 { font-size: 42px; margin-bottom: 24px; text-align: center; color: #38bdf8; }
-  .skill { 
-    width: 80px; 
-    font-size: 12px; 
-  }
-  .skill i { 
-    font-size: 22px; 
-    color: #38bdf8
-  }
-  /* ===================================================
-    SEÇÃO DE PROJETOS E CARDS
-  =================================================== */
+
   .projetos {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+
   .cards-projetos {
     flex-direction: column;
     gap: 20px;
     margin-top: 15px;
   }
+
   .card {
     width: 100%;
   }
+
   .card h3 {
     font-size: 1.1rem;
   }
+
   .card p {
     font-size: 0.8rem;
   }
-  /* ===================================================
-  AJUSTES ADICIONAIS
-  =================================================== */
+
   .hero-btn {
     padding: 10px 20px;
   }
-  .skills h2, 
-  .projetos h2, 
+
+  .projetos h2,
   .contato h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
- 
-   /* AJUSTE na ALTURA DO CARROSSEl */
+
   .carousel-inner {
-    height: 180px; /* Altura menor para telas muito pequenas */
+    height: 180px;
   }
 }
 
-
 @media (max-width: 576px) {
-  .hero-img img { width: 140px; height: 140px; }
-  .sobre h2 { font-size: 26px; }
-  .sobre p { font-size: 15px; }
-  .skill { width: 90px; font-size: 13px; }
-  .skill i { font-size: 26px; }
-  /* AJUSTE nA ALTURA DO CARROSSEL */
-  .carousel-inner { 
-    height: 220px; /* Altura para tablets */
+  .hero-img img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .sobre h2 {
+    font-size: 26px;
+  }
+
+  .sobre p {
+    font-size: 15px;
+  }
+
+  .carousel-inner {
+    height: 220px;
   }
 }
 
 @media (max-width: 768px) {
-  .menu { 
-    display: none; 
-    flex-direction: column; 
-    background-color: #111; 
-    position: absolute; 
-    top: 60px; 
-    right: 20px; 
-    width: 200px; 
-    padding: 15px; 
-    border-radius: 8px; 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
-    z-index: 1001; 
-  }
-  .menu.show { 
-    display: flex; 
-  }
-  .menu-toggle { 
-    display: block; 
-  }
-  .hero-img img { 
-    width: 160px; 
-    height: 160px; 
-    margin: 0 auto; 
-    display: block; 
-    border-radius: 50%; 
-    border: 4px solid #38bdf8; 
-  }
-  .sobre { 
-    padding: 1.5rem 1rem; 
-  }
-  .sobre h2 { 
-    font-size: 28px; 
-  }
-  .sobre p { 
-    max-width: 90%; 
-    font-size: 16px; 
-    line-height: 1.6; 
-    margin: 0 auto; 
-  }
-  
-  /* ===================================================
-     AJUSTES PARA A SEÇÃO DE HABILIDADES
-     (Correção de alinhamento e espaçamento)
-  =================================================== */
-  .skills {
-    padding-bottom: 2rem; /* Adiciona espaçamento na parte inferior da seção */
-    text-align: center; /* Garante que o texto seja centralizado */
-    background-color: #1e293b; /* Cor escura de fundo para telas grandes */
-    color:#f1f5f9;
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
   }
 
-
-  .skills h2 {
-    font-size: 28px; /* Ajusta o tamanho da fonte para 768px */
-    margin-bottom: 1rem;
-    color: #38bdf8; /* Mantém a cor azul */
+  .menu.show {
+    display: flex;
   }
 
-  .skills-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-    gap: 16px; 
-    justify-content: center; /* Centraliza a grade inteira */
-    justify-items: center; /* Centraliza cada item do grid */
+  .menu-toggle {
+    display: block;
   }
 
-  .skill { 
-    width: 100px; /* Largura ajustada para 768px */
-    padding: 16px 10px; 
-    font-size: 14px; 
-  }
-  
-  .skill i { 
-    font-size: 28px; /* Tamanho do ícone para 768px */
-    margin-bottom: 6px; 
-    color: #38bdf8;
+  .hero-img img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
   }
 
-  /* ===================================================
-     AJUSTES PARA A SEÇÃO DE PROJETOS E CARDS
-     (Melhora a responsividade e o espaçamento)
-  =================================================== */
-  .projetos { 
-    padding: 2rem 1rem; /* Adiciona padding para as laterais */
-    background-color: #1e293b; 
+  .projetos {
+    padding: 2rem 1rem;
   }
 
-  .projetos h2 { 
-    text-align: center; 
-    font-size: 2rem; 
-    margin-bottom: 40px; 
+  .projetos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
   }
-  .cards-projetos { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 30px; 
-    justify-content: center; 
+
+  .cards-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
   }
-  .card { 
-    background: #fff; 
-    border-radius: 15px; 
-    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
-    padding: 20px; 
+
+  .card {
     width: 100%;
-    max-width: 300px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    max-width: 300px;
+    padding: 20px;
   }
-  .card h3 { 
-    margin-bottom: 10px; 
-    font-size: 1.25rem; 
+
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
   }
-  .card p { 
-    margin: 15px 0; 
-    font-size: 0.95rem; 
-    text-align: center; 
+
+  .card p {
+    margin: 15px 0;
+    font-size: 0.95rem;
+    text-align: center;
   }
-  .card .btn-ver { 
-    margin-top: auto; 
-    padding: 10px 20px; 
-    background: #007bff; 
-    color: white; 
-    text-decoration: none; 
-    border-radius: 8px; 
-    transition: background 0.3s ease; 
+
+  .carousel-inner {
+    height: 220px;
   }
-  .card .btn-ver:hover { 
-    background: #0056b3; 
+
+  .col-lg-8 {
+    transform: none;
   }
-  /* AJUSTE nA ALTURA DO CARROSSEL */
-  .carousel-inner { 
-    height: 220px; /* Altura para tablets */
+
+  .col-lg-4 {
+    margin-top: 0;
+  }
+
+  .botoes-projeto {
+    gap: 10px;
   }
 }
-
 
 @media (min-width: 1024px) {
-  .sobre { padding: 100px 80px; }
-  .sobre h2 { font-size: 42px; margin-bottom: 24px; }
-  .sobre p { font-size: 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
-  .skill { width: 120px; font-size: 16px; padding: 20px 12px; }
-  .skill h2 { color: #38bdf8; }
-  #skills {
-    background-color: #1e293b; /* Cor escura de fundo para telas grandes */
-    color:#f1f5f9;           /* Cor do texto (clara) para contraste */
+  .sobre {
+    padding: 100px 80px;
   }
-  #skills h2 { font-size: 42px; margin-bottom: 24px; text-align: center; color: #38bdf8; }
-  .skill i { font-size: 36px; color: #38bdf8; }
-  .projetos { padding: 60px 0; background-color: #1e293b; }
-  .projetos h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
-  .cards-projetos { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-  .card { background: #fff;
-     border-radius: 15px;
-     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-     padding: 20px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     }
-  .card h3 { margin-bottom: 10px; font-size: 1.25rem; }
-  .card p { margin: 15px 0; font-size: 0.95rem; text-align: center; }
-  .card .btn-ver { margin-top: auto; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 8px; transition: background 0.3s ease; }
-  .card .btn-ver:hover { background: #0056b3; }
-  .carousel {
-     position: relative;
-     width: 100%;
-     overflow: hidden;
-     border-radius: 10px;
-     margin-bottom: 15px;
-       }
-  .carousel-images { display: flex; transition: transform 0.4s ease-in-out; }
-  .carousel-images img { 
-     width: 100%;
-     flex-shrink: 0;
-     object-fit: cover;
-     border-radius: 10px;
-     }
-  .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); border: none; color: white; font-size: 1.5rem; padding: 5px 10px; cursor: pointer; z-index: 1; border-radius: 5px; }
-  .carousel-btn.prev { left: 10px; }
-  .carousel-btn.next { right: 10px; }
-  .contato { padding: 80px; background-color: #1e293b; color: #f1f5f9; text-align: center; }
-  .contato h2 { font-size: 36px; color: #38bdf8; margin-bottom: 20px; }
-  .contato p { font-size: 18px; color: #e2e8f0; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
-  .contato .btn-contato { padding: 12px 28px; background-color: #38bdf8; color: #0f172a; font-weight: bold; text-decoration: none; border-radius: 8px; transition: background 0.3s ease; }
-  .contato .btn-contato:hover { background-color: #0ea5e9; color: #ffffff; }
 
-   /* AJUSTE NA ALTURA DO CAROUSSEL*/
+  .sobre h2 {
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+
+  .sobre p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .projetos {
+    padding: 60px 20px;
+  }
+
+  .projetos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .contato {
+    padding: 80px 20px;
+    color: #f1f5f9;
+    text-align: center;
+  }
+
+  .contato h2 {
+    font-size: 36px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+  }
+
+  .contato p {
+    font-size: 18px;
+    color: #e2e8f0;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .carousel-inner {
-     height: 300px;
+    height: 300px;
   }
 }
 
+/* ===================================================
+   RESPONSIVIDADE - SOBRE + TECNOLOGIAS
+=================================================== */
+@media (max-width: 1100px) {
+  .skills .container {
+    max-width: 950px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
-/* Correção final para o salto do carrossel */
-.col {
-  padding-left: 0;
-  padding-right: 0;
+  .skills-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .skills-box {
+    padding: 18px;
+  }
+
+  .skills-box h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .skills-box .skills-grid {
+    grid-template-columns: repeat(2, minmax(95px, 1fr));
+    gap: 12px;
+  }
+
+  .skill {
+    min-height: 92px;
+    padding: 12px 8px;
+  }
+
+  .skill i {
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .skill span {
+    font-size: 12px;
+  }
+
+  .skills h2 {
+    margin-bottom: 24px;
+  }
+
+  .sobre p {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre {
+    padding: 46px 16px 28px;
+  }
+
+  .sobre h2 {
+    font-size: 30px;
+  }
+
+  .sobre p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .skills {
+    padding: 28px 16px 56px;
+  }
+
+  .skills-wrapper {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .skills-box {
+    padding: 18px;
+  }
+
+  .skills-box h3 {
+    text-align: center;
+  }
+
+  .skills-box .skills-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre h2,
+  .skills h2 {
+    font-size: 26px;
+  }
+
+  .skills-box {
+    padding: 16px;
+  }
+
+  .skills-box h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .skills-box .skills-grid {
+    grid-template-columns: repeat(2, minmax(90px, 1fr));
+    gap: 10px;
+  }
+
+  .skill {
+    min-height: 88px;
+    padding: 10px 8px;
+  }
+
+  .skill i {
+    font-size: 24px;
+  }
+
+  .skill span {
+    font-size: 11px;
+  }
 }
